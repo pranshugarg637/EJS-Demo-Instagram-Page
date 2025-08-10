@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+</head>
+<body>
+    <h2>Welcome to this page  </h2>
+    <button>Follow</button>
+    <button>Message</button>
+  
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        img{
+            height:200px;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to page of <%=data.username%></h1>
+    <h3>Followers : <%=data.followers%>&nbsp;&nbsp;&nbsp;&nbsp;Following : <%=data.following%></h3>
+    <br>
+    <hr>
+    <%for(post of data.posts){%>
+        <img src="<%=post.image%>"><br>
+        <h3>Likes : <%=post.likes%></h3>
+        <h3>Comments : <%=post.comments%></h3>
+    <%}%>
+</body>
+</html>
+
